@@ -25,7 +25,25 @@ void SendDataToDevice(void* buffer, uint32_t size)
 int main(int argc, char* argv[])
 {
     char buffer[] = "Hello, world!";
+    #if 1
+    /*!
+     *	\note		To make embedded code working with the external hardware or communication 
+     *			protocols portable, embedded developers should use fixed-size integer 
+     *			types, which explicitly specify the size of a data field.
+     *
+     *			`uint32_t` means that it will take 32 bits exactly on every platform -
+     *			16-, 32-, or 64-bit platform.
+     */
     uint32_t size = sizeof(buffer);
+    #else
+    /*!
+     *	\warning	Suppose that we declare the `int` data type, in this case, 
+     *			the code can only work on 32- and 64-bit systems, and silently
+     *			produce incorrect results on 16-bit system, because `sizeof(int)` 
+     *			is 16 here.
+     */
+    int size = sizeof(buffer);
+    #endif
     SendDataToDevice(&size, sizeof(size));
     SendDataToDevice(buffer, size);
 
