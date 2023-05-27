@@ -5,8 +5,7 @@
 
 
 CXX = arm-linux-gnueabihf-g++
-CXXFLAGS = -std=c++11
-
+CXXFLAGS = -std=c++14 -g -Wall
 
 PROJECT = sender
 
@@ -20,11 +19,11 @@ $(PROJECT) : $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 sender.o : sender.cpp sender.hpp
-	$(CXX) $(CXXFLAGS) -c sender.cpp -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 
 sender_main.o : sender_main.cpp sender.hpp
-	$(CXX) $(CXXFLAGS) -c sender_main.cpp -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 
 clean :
