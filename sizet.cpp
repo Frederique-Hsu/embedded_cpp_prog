@@ -19,6 +19,7 @@ int main(int argc, char* argv[])
     std::cout << "Size of size_t is " << sizeof(size_t) << std::endl;
 
     StoreData(data, sizeof(data));
+    std::cout << data << std::endl;
 
     return 0;
 }
