@@ -16,6 +16,6 @@ int main(int argc, char* argv[])
 
 	for (int index = 1; index < argc; ++index)
 	{
-		WriteMessage(fd, argv[1]);
+		WriteMessage(fd, argv[index]);
 	}
 }
