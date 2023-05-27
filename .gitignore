@@ -1,0 +1,8 @@
+# the following file extensions and directories will be ignored by git tracking system.
+
+*.o
+*.exe
+*.obj
+
+
+**/build/*
