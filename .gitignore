@@ -3,6 +3,8 @@
 *.o
 *.exe
 *.obj
+*.data
+*.out
 
 
 **/build/*
