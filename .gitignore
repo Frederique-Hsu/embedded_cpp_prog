@@ -5,6 +5,7 @@
 *.obj
 *.data
 *.out
+*.user
 
 
 **/build/*
