@@ -1,0 +1,3 @@
+[submodule "references/real-time-cpp"]
+	path = references/real-time-cpp
+	url = https://github.com/ckormanyos/real-time-cpp.git
