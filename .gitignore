@@ -6,6 +6,8 @@
 *.data
 *.out
 *.user
+*.pdf
+*.txt
 
 
 **/build/*
