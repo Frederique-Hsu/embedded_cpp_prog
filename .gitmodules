@@ -1,3 +1,6 @@
 [submodule "references/real-time-cpp"]
 	path = references/real-time-cpp
 	url = https://github.com/ckormanyos/real-time-cpp.git
+[submodule "SimulIDE-dev"]
+	path = SimulIDE-dev
+	url = https://github.com/Arcachofo/SimulIDE-dev.git
