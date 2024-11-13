@@ -16,7 +16,7 @@ led::led(const port_type p, const bval_type b) : port(p), bval(b)
     *reinterpret_cast<volatile bval_type*>(port - 1U) |= bval;
 }
 
-inline void led::toggle() const
+void led::toggle() const
 {
     // Toggle the LED
     *reinterpret_cast<volatile bval_type*>(port) ^= bval;   // C++ register access

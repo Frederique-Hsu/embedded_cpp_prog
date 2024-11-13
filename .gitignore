@@ -8,6 +8,11 @@
 *.user
 *.pdf
 *.txt
+*.hex
+*.elf
+*.lss
+*.map
+*.json
 
 
 **/build/*

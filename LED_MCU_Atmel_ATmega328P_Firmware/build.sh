@@ -9,6 +9,11 @@
 
 if [[ -n "$(which avr-g++)" ]]; then
     CXX=avr-g++
+    CXX_OBJCOPY=avr-objcopy
+    CXX_OBJDUMP=avr-objdump
+    CXX_SIZE=avr-size
+    CXX_NM=avr-nm
+    CXX_FILT=avr-c++filt
     CXX_PATH="$(dirname $(which avr-g++))"
 else
     echo
@@ -39,4 +44,20 @@ $CXX -mmcu=atmega328p -fsigned-char -O2 -std=c++14 -I. -c main.cpp -o bin/main.o
 
 echo
 echo "Link      : objects to bin/led.elf"
-$CXX -mmcu=atmega328p -nostartfiles -nostdlib -Wl,-Tavr.ld,-Map,bin/led.map bin/led.o bin/main.o -o bin/led.elf
+$CXX -mmcu=atmega328p -nostartfiles -nostdlib -Wl,-Tavr.ld,-Map,bin/led.map bin/led.o bin/main.o bin/crt0.o -o bin/led.elf
+
+echo
+echo "Extract   : executable hex file   : from bin/led.elf"
+$CXX_OBJCOPY -O ihex bin/led.elf bin/led.hex
+
+echo
+echo "Extract   : assembly list file    : from bin/led.elf"
+$CXX_OBJDUMP --disassemble bin/led.elf > bin/led.lss
+
+echo
+echo "Extract   : size information      : from bin/led.elf"
+$CXX_NM --numeric-sort --print-size bin/led.elf > bin/led_nm.txt
+
+echo
+echo "Extract   : damangled names       : from bin/led.elf"
+$CXX_NM --numeric-sort --print-size bin/led.elf | $CXX_FILT > bin/led_cppfilt.txt
