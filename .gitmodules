@@ -4,3 +4,6 @@
 [submodule "SimulIDE-dev"]
 	path = SimulIDE-dev
 	url = https://github.com/Arcachofo/SimulIDE-dev.git
+[submodule "avr-libstdcpp"]
+	path = avr-libstdcpp
+	url = https://github.com/modm-io/avr-libstdcpp.git
