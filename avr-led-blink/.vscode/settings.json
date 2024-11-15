@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/frederique_hsu/Programming/embedded_cpp_prog/avr-led-blink",
+            "binaryPath": "/home/frederique_hsu/Programming/embedded_cpp_prog/avr-led-blink/avr-led-blink.elf",
+            "binaryArgs": []
+        }
+    ]
+}

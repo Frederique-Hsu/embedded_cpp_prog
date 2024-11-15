@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/avr-gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerArgs": [
+                "-mmcu=atmega328p",     // will ensure MCU definitions are set correctly
+                "-DF_CPU=16000000ul",   // will ensure F_CPU is set correctly
+                "-Os"                   // will avoid optimization warning re: _delay
+            ]
+        }
+    ],
+    "version": 4
+}
