@@ -13,6 +13,7 @@
 *.lss
 *.map
 *.json
+*.cfg
 
 
 **/build/*
