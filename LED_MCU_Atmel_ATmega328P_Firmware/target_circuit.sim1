@@ -34,7 +34,7 @@
 
 <item itemtype="Tunnel" CircId="Tunnel-48" mainComp="false" Show_id="false" Show_Val="false" Pos="-396,296" rotation="0" hflip="-1" vflip="1" label="Tunnel-48" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="SPI1_SCK" IsBus="false" />
 
-<item itemtype="MCU" CircId="mega328PB-1" mainComp="false" ShowProp="Frequency" Show_id="true" Show_Val="true" Pos="-532,280" rotation="0" hflip="1" vflip="1" label="IC1 ATmega328P" idLabPos="1.40028,100.424" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" ForceFreq="true" savePGM="false" Program="bin/led.hex" Auto_Load="false" saveEepr="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+<item itemtype="MCU" CircId="mega328PB-1" mainComp="false" ShowProp="Frequency" Show_id="true" Show_Val="true" Pos="-532,280" rotation="0" hflip="1" vflip="1" label="IC1 ATmega328P" idLabPos="1.40028,100.424" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" ForceFreq="true" savePGM="false" Program="../references/real-time-cpp/examples/chapter02_03a/build/chapter02_03a.hex" Auto_Load="false" saveEepr="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
 
 <item itemtype="Tunnel" CircId="Tunnel-49" mainComp="false" Show_id="false" Show_Val="false" Pos="-396,312" rotation="0" hflip="-1" vflip="1" label="Tunnel-49" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="SPI1_MOSI" IsBus="false" />
 
